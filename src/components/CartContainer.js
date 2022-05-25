@@ -7,13 +7,11 @@ import CartItems from "./CartItems";
 const CartContainer = () => {
   const { cartItems, total, amount } = useSelector((state) => state.cart);
 
-  
-
   const dispatch = useDispatch();
 
   if (amount < 1) {
     return (
-      <section>
+      <section className="cart">
         <header>
           <h2>You Cart</h2>
           <h4 className="empty-cart">is currently empty</h4>
